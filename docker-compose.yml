@@ -33,6 +33,7 @@ services:
       - wp_site
 
   # phpMyAdmin service
+  # TODO: not working
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     depends_on:
@@ -44,7 +45,6 @@ services:
       MYSQL_ROOT_PASSWORD: your_mysql_root_password
     networks:
       - wp_site
-      - nginxproxymanager_default
 
   # Nginx service as reverse proxy
   nginx:
